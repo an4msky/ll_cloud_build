@@ -10,7 +10,7 @@ RUN usermod -aG wheel docker
 #ENV HOME=/home/docker
 ENV EXPORT PM2_HOME=/tmp
 
-#RUN mkdir /.pm2
+RUN mkdir /.pm2
 #RUN chown -R docker:wheel /.pm2
 
 
