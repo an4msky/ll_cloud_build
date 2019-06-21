@@ -1,5 +1,4 @@
-
-set -e
+#!/bin/sh
 
 cd /opt/learninglocker/
 pm2 start pm2/all.json --hp /home/docker
