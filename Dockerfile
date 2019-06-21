@@ -15,9 +15,10 @@ RUN chown -R docker:wheel /.pm2
 
 #CMD ["/usr/sbin/init"]
 
-USER docker
 COPY start_llr.sh /opt/learninglocker/start_llr.sh
 RUN chmod +x /opt/learninglocker/start_llr.sh
+
+USER docker
 
 ENTRYPOINT /opt/learninglocker/start_llr_v2.sh
 
