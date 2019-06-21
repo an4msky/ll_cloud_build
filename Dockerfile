@@ -18,7 +18,7 @@ RUN chown -R docker:wheel /.pm2
 COPY start_llr.sh /opt/start_llr.sh
 RUN chmod +x /opt/start_llr.sh
 
-USER docker
+#USER docker
 
 CMD ["/opt/start_llr.sh"]
 
