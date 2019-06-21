@@ -20,5 +20,5 @@ RUN chmod +x /opt/learninglocker/start_llr.sh
 
 USER docker
 
-ENTRYPOINT /opt/learninglocker/start_llr_v2.sh
+ENTRYPOINT /opt/learninglocker/start_llr.sh
 
