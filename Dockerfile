@@ -20,5 +20,4 @@ RUN chmod +x /opt/start_llr.sh
 
 #USER docker
 
-CMD ["/opt/start_llr.sh"]
-
+ENTRYPOINT ["/opt/start_llr.sh"]
