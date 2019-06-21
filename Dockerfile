@@ -1,4 +1,4 @@
-FROM lrs-stage2:latest
+FROM docker-registry.default.svc:5000/products/lrs-stage2:latest
 
 RUN yum -y install sudo
 
