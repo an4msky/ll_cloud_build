@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd /opt/learninglocker/
-pm2 start pm2/all.json --hp /home/docker
+sudo -u docker pm2 start pm2/all.json --hp /home/docker
 cd /opt/xapi-service/
-pm2 start pm2/xapi.json --hp /home/docker
+sudo -u docker pm2 start pm2/xapi.json --hp /home/docker
 pm2 logs
