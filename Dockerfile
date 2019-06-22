@@ -17,10 +17,10 @@ COPY start_llr.sh /opt/learninglocker/start_llr.sh
 RUN chmod +x /opt/learninglocker/start_llr.sh
 
 #USER docker
-#CMD ["/usr/sbin/init"]
+CMD ["/usr/sbin/init"]
 
 #CMD ["/opt/learninglocker/start_llr.sh"]
-ENTRYPOINT ["/opt/learninglocker/start_llr.sh"]
+#ENTRYPOINT ["/opt/learninglocker/start_llr.sh"]
 
 
 
