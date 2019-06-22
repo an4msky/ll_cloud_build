@@ -13,15 +13,14 @@ RUN yum -y install sudo bash
 #RUN mkdir /.pm2
 #RUN chown -R docker:wheel /.pm2
 
-
-
-#COPY start_llr.sh /opt/learninglocker/start_llr.sh
-#RUN chmod +x /opt/learninglocker/start_llr.sh
+COPY start_llr.sh /opt/learninglocker/start_llr.sh
+RUN chmod +x /opt/learninglocker/start_llr.sh
 
 #USER docker
-CMD ["/usr/sbin/init"]
+#CMD ["/usr/sbin/init"]
 
-#ENTRYPOINT ["/opt/learninglocker/start_llr.sh"]
 #CMD ["/opt/learninglocker/start_llr.sh"]
+ENTRYPOINT ["/opt/learninglocker/start_llr.sh"]
+
 
 
