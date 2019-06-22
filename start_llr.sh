@@ -11,3 +11,5 @@ cd /opt/learninglocker
 node worker/dist/server/ &
 node ui/dist/server/ &
 node api/dist/server/ &
+
+wait
