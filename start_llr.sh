@@ -7,6 +7,7 @@
 #pm2 logs
 
 cd /opt/learninglocker
+
 node worker/dist/server/ &
 node ui/dist/server/ &
 node api/dist/server/ &
