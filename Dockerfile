@@ -65,6 +65,6 @@ WORKDIR /opt/learninglocker
 #CMD ["/usr/sbin/init"]
 #CMD ["/opt/learninglocker/start_llr.sh"]
 #ENTRYPOINT ["/opt/learninglocker/start_llr.sh"]
-CMD ['pm2-docker', 'pm2/all.json']
+CMD ['/usr/bin/pm2-docker', 'pm2/all.json']
 
 
