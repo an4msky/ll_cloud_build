@@ -72,6 +72,7 @@ RUN ls -la /usr/bin/pm2-docker
 RUN chmod -R 777 logs/
 
 #CMD ['/usr/bin/pm2-docker', 'pm2/all.json']
-ENTRYPOINT ['/usr/lib/node_modules/pm2/bin/pm2-docker', 'pm2/all.json']
+ENTRYPOINT ["/bin/bash", "/opt/learninglocker/start_llr.sh"]
+
 
 
