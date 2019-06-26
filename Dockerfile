@@ -56,6 +56,7 @@ RUN usermod -d /home/docker docker
 
 RUN mkdir /.pm2
 RUN chown -R docker:wheel /.pm2
+RUN chown -R docker:wheel /opt/learninglocker
 
 COPY start_llr.sh /opt/learninglocker/start_llr.sh
 RUN chmod +x /opt/learninglocker/start_llr.sh
@@ -69,7 +70,7 @@ WORKDIR /opt/learninglocker
 #ENTRYPOINT ["/opt/learninglocker/start_llr.sh"]
 
 RUN ls -la /usr/bin/pm2-docker
-RUN chmod -R 777 logs/
+
 
 #CMD ['/usr/bin/pm2-docker', 'pm2/all.json']
 ENV PM2_HOME=/home/docker
