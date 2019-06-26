@@ -52,7 +52,7 @@ EXPOSE 3000 8080 8081
 #RUN usermod -d /home/docker docker
 
 #ENV HOME=/home/docker
-#ENV EXPORT PM2_HOME=/tmp
+#ENV PM2_HOME=/tmp
 
 #RUN mkdir /.pm2
 #RUN chown -R docker:wheel /.pm2
@@ -72,6 +72,7 @@ RUN ls -la /usr/bin/pm2-docker
 RUN chmod -R 777 logs/
 
 #CMD ['/usr/bin/pm2-docker', 'pm2/all.json']
+ENV PM2_HOME=/tmp
 ENTRYPOINT ["/bin/bash", "/opt/learninglocker/start_llr.sh"]
 
 
