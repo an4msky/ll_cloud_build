@@ -5,7 +5,7 @@
 #cd /opt/xapi-service/
 #pm2 start pm2/xapi.json 
 #pm2-docker logs
-export PM2_HOME="/tmp"
+export PM2_HOME="/home/docker"
 
 cd /opt/learninglocker
 

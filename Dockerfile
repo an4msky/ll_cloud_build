@@ -46,21 +46,21 @@ EXPOSE 3000 8080 8081
 
 #CMD ['pm2-docker', 'pm2/all.json']
 
-#RUN adduser docker
-#RUN passwd -d docker
-#RUN usermod -aG wheel docker
-#RUN usermod -d /home/docker docker
+RUN adduser docker
+RUN passwd -d docker
+RUN usermod -aG wheel docker
+RUN usermod -d /home/docker docker
 
 #ENV HOME=/home/docker
 #ENV PM2_HOME=/tmp
 
-#RUN mkdir /.pm2
-#RUN chown -R docker:wheel /.pm2
+RUN mkdir /.pm2
+RUN chown -R docker:wheel /.pm2
 
 COPY start_llr.sh /opt/learninglocker/start_llr.sh
 RUN chmod +x /opt/learninglocker/start_llr.sh
 
-#USER docker
+USER docker
 
 WORKDIR /opt/learninglocker
 
@@ -72,7 +72,7 @@ RUN ls -la /usr/bin/pm2-docker
 RUN chmod -R 777 logs/
 
 #CMD ['/usr/bin/pm2-docker', 'pm2/all.json']
-ENV PM2_HOME=/tmp
+ENV PM2_HOME=/home/docker
 ENTRYPOINT ["/bin/bash", "/opt/learninglocker/start_llr.sh"]
 
 
