@@ -1,7 +1,7 @@
 FROM docker-registry.default.svc:5000/products/lrs-stage2:latest
 
 #ENV HOME=/home/docker
-ENV PM2_HOME=/tmp
+#ENV PM2_HOME=/tmp
 
 
 #RUN mkdir /.pm2
