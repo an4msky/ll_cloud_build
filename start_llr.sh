@@ -15,5 +15,5 @@ cd /opt/learninglocker
 #node xapi/ &
 #wait
 
-runuser user -c '/usr/lib/node_modules/pm2/bin/pm2-docker pm2/all.json'
+runuser docker -c '/usr/lib/node_modules/pm2/bin/pm2-docker pm2/all.json'
 
