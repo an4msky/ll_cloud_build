@@ -1,25 +1,5 @@
 FROM docker-registry.default.svc:5000/products/lrs-stage2:latest
 
-#RUN yum -y install nginx
-
-#RUN mkdir /etc/nginx/sites-available
-#RUN mkdir /etc/nginx/sites-enabled
-#COPY learninglocker.conf /etc/nginx/sites-available/learninglocker.conf
-#COPY nginx.conf /etc/nginx/nginx.conf
-#RUN ln -s /etc/nginx/sites-available/learninglocker.conf /etc/nginx/sites-enabled/learninglocker.conf
-
-#EXPOSE 80 8333 3000 8080 8081
-EXPOSE 3000 8080 8081
-
-#CMD ["env"]
-
-#CMD ['pm2-docker', 'pm2/all.json']
-
-#RUN adduser docker
-#RUN passwd -d docker
-#RUN usermod -aG wheel docker
-#RUN usermod -d /home/docker docker
-
 #ENV HOME=/home/docker
 #ENV PM2_HOME=/tmp
 
