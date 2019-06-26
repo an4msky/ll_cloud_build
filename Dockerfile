@@ -2,6 +2,8 @@ FROM docker-registry.default.svc:5000/products/lrs-stage2:latest
 
 RUN yum -y install sudo bash
 
+RUN rm -rf /opt/learninglocker
+
 ENV LL_TAG=v2.8.2
 RUN git clone https://github.com/LearningLocker/learninglocker.git /opt/learninglocker \
     && cd /opt/learninglocker \
