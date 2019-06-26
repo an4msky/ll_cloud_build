@@ -5,7 +5,7 @@
 #cd /opt/xapi-service/
 #pm2 start pm2/xapi.json 
 #pm2-docker logs
-export PM2_HOME="/home/docker"
+#export PM2_HOME="/home/docker"
 
 cd /opt/learninglocker
 
@@ -15,5 +15,5 @@ cd /opt/learninglocker
 #node xapi/ &
 #wait
 
-runuser docker -c '/usr/lib/node_modules/pm2/bin/pm2-docker pm2/all.json'
+/usr/lib/node_modules/pm2/bin/pm2-docker pm2/all.json
 
