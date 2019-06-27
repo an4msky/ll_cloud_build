@@ -3,7 +3,6 @@ FROM docker-registry.default.svc:5000/products/lrs-stage2:latest
 #ENV HOME=/home/docker
 #ENV PM2_HOME=/tmp
 
-RUN useradd docker
 RUN useradd -ms /bin/bash docker
 RUN mkdir /.pm2
 RUN chown -R docker:docker /.pm2
