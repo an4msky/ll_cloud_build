@@ -21,6 +21,7 @@ WORKDIR /opt/learninglocker
 
 #RUN ls -la /usr/bin/pm2-docker
 #CMD ['/usr/bin/pm2-docker', 'pm2/all.json']
+
 ENV PM2_HOME=/home/docker
 ENTRYPOINT ["/bin/bash", "/opt/learninglocker/start_llr.sh"]
 
