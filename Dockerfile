@@ -23,6 +23,7 @@ WORKDIR /opt/learninglocker
 #CMD ['/usr/bin/pm2-docker', 'pm2/all.json']
 
 ##ENV PM2_HOME=/home/docker
+COPY .env_xapi /src/xapi-service/.env
 ENTRYPOINT ["/bin/bash", "/opt/learninglocker/start_llr.sh"]
 
 
