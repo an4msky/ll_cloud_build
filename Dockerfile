@@ -10,7 +10,7 @@ RUN chown -R docker:docker /.pm2
 COPY start_llr.sh /opt/learninglocker/start_llr.sh
 RUN chmod +x /opt/learninglocker/start_llr.sh
 
-RUN chown -R docker:docker /opt/learninglocker
+RUN chown -R docker:docker /opt/
 USER docker
 
 WORKDIR /opt/learninglocker
