@@ -7,13 +7,13 @@
 #pm2-docker logs
 #export PM2_HOME="/home/docker"
 
-cd /opt/learninglocker
+##cd /opt/learninglocker
 
-#node worker/dist/server/ &
-#node ui/dist/server/ &
-#node api/dist/server/ &
-#node xapi/ &
-#wait
+node worker/dist/server/ &
+node ui/dist/server/ &
+node api/dist/server/ &
+node xapi/ &
+wait
 
-/usr/lib/node_modules/pm2/bin/pm2-docker pm2/all.json
+##/usr/lib/node_modules/pm2/bin/pm2-docker pm2/all.json
 
