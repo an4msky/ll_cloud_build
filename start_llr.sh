@@ -14,7 +14,7 @@ node api/dist/server/ &
 node cli/dist/server/ &
 
 cd /opt/xapi-service
-node xapi/ &
+node ./ &
 
 wait
 
