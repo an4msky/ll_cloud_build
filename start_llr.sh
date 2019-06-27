@@ -8,11 +8,14 @@
 #export PM2_HOME="/home/docker"
 
 ##cd /opt/learninglocker
-
 node worker/dist/server/ &
 node ui/dist/server/ &
 node api/dist/server/ &
+node cli/dist/server/ &
+
+cd /opt/xapi-service
 node xapi/ &
+
 wait
 
 ##/usr/lib/node_modules/pm2/bin/pm2-docker pm2/all.json
