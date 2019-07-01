@@ -8,7 +8,7 @@
 #export PM2_HOME="/home/docker"
 
 ##cd /opt/learninglocker
-/usr/sbin/nginx -c /etc/nginx/nginx.conf &
+#/usr/sbin/nginx -c /etc/nginx/nginx.conf &
 node worker/dist/server/ &
 node ui/dist/server/ &
 node api/dist/server/ &
