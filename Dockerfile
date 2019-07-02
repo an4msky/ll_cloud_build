@@ -14,8 +14,9 @@ RUN chmod +x /opt/learninglocker/start_llr.sh
 ##USER docker
 
 WORKDIR /opt/learninglocker
-RUN chmod -R g+w /opt/learninglocker 
-RUN chmod -R g+w /opt/xapi-service
+RUN chgrp -R 0 /opt/learninglocker && chmod -R g=u /opt/learninglocker
+RUN chgrp -R 0 /opt/xapi-service && chmod -R g=u /opt/xapi-service
+
 
 #CMD ["/usr/sbin/init"]
 #CMD ["/opt/learninglocker/start_llr.sh"]
