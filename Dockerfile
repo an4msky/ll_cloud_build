@@ -14,6 +14,8 @@ RUN chmod +x /opt/learninglocker/start_llr.sh
 ##USER docker
 
 WORKDIR /opt/learninglocker
+RUN chmod -R g+w /opt/learninglocker 
+RUN chmod -R g+w /opt/xapi-service
 
 #CMD ["/usr/sbin/init"]
 #CMD ["/opt/learninglocker/start_llr.sh"]
@@ -22,7 +24,7 @@ WORKDIR /opt/learninglocker
 #RUN ls -la /usr/bin/pm2-docker
 #CMD ['/usr/bin/pm2-docker', 'pm2/all.json']
 
-##ENV PM2_HOME=/home/docker
+#ENV PM2_HOME=/home/docker
 COPY .env_xapi /opt/xapi-service/.env
 ENTRYPOINT ["/bin/bash", "/opt/learninglocker/start_llr.sh"]
 
